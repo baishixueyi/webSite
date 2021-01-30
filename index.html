@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="格言，名言，">
-    <meta name="description" content="格言，名言">
+    <meta name="keywords" content="格言,名言,情商,鸡汤">
+    <meta name="description" content="格言,名人名言,如何提高情商,">
     <title>我的分享</title>
     <style>
         * {
@@ -37,7 +37,7 @@
             flex-direction: column;
         }
         main > p {
-            width: 60%;
+            width: 75%;
             margin: 0 auto;
             margin-top: 20px;
             font-size: 50px;
@@ -47,9 +47,11 @@
             -webkit-background-clip: text;
             color: transparent;
             overflow: scroll;
+            height: 200px;
         }
         main > .change {
             margin-top: 20px;
+            
             font-size: 14px;
             margin-bottom: 20px;
         }
@@ -81,9 +83,15 @@
 </body>
 </html>
 <script>
+    window.onload = ()=>{
+        showText()
+    }
     let arr1=['活着就是为了改变世界，难道还有其他原因吗？','莫愁前路无知己，天下谁人不识君','天下绝无不热烈勇敢地追求成功，而能取得成功的人',
-'驱走黑暗唯一的方法就是用光明充满它','加油 加油 加油','付出了不一定有回报，但不付出永远没有回报','上帝助自助者','成功的道路上充满荆棘，苦战方能成功','所谓天才，那就是假话，勤奋的工作才是实在的','面朝大海，春暖花开；笑到最后，笑得最好']
+'驱走黑暗唯一的方法就是用光明充满它','好看的皮囊千篇一律，有趣的灵魂万里挑一','付出了不一定有回报，但不付出永远没有回报','上帝助自助者','成功的道路上充满荆棘，苦战方能成功','所谓天才，那就是假话，勤奋的工作才是实在的','面朝大海，春暖花开；笑到最后，笑得最好']
     document.querySelector('.change').onclick = (e)=>{
+        showText();
+    }
+    function showText(){
         let index = parseInt(Math.random()*10)
         document.querySelector('.geyan').innerText = arr1[index]
     }
